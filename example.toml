@@ -1,0 +1,42 @@
+[owner]
+name = "Scaleway" # Company name
+website = "https://www.scaleway.com" # Company main website
+looking_glass = "https://lg.scaleway.com" # Company looking glass
+description = "Scaleway is a French hosting company and public cloud provider" # Describe what you are doing
+
+# Default values to be inhrited on all targets, all those values can be overriden per target
+
+[defaults]
+asn = 12876 # You main ASN
+type = "hosting" # Default IP type (hosting, isp, backbone, etc... TBD)
+country = "france" # Default country
+probe = "icmp" # Default probe type
+routing = "unicast" # Default ip routing (unicast, anycast)
+family = "ipv4" # Default family
+
+# ICMP targets
+
+[targets.dc2] # Target key should be unique and a valid slug
+address = "1.2.3.4" # Target address
+locode = "FRVTY" # Fetch your location code from https://unece.org/trade/cefact/unlocode-code-list-country-and-territory
+description = "Scaleway DC2" # Wathever description that can help
+
+[targets.dc3]
+address = "1.2.3.4"
+locode = "FRVTY"
+description = "Scaleway DC3"
+
+[targets.dc4]
+address = "1.2.3.4"
+locode = "FRPAR"
+description = "Scaleway DC4"
+
+[targets.dc5]
+address = "1.2.3.4"
+locode = "FRSOL"
+description = "Scaleway DC5"
+
+# HTTP(s) targets
+[targets.https]
+probe = "https"
+address = "https://www.scaleway.com"
