@@ -1,3 +1,6 @@
+# One file per company/operator
+# The filename should be a valid slug.toml, it will be used for the probe name
+
 [owner]
 name = "Scaleway" # Company name
 website = "https://www.scaleway.com" # Company main website

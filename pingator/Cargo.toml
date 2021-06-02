@@ -1,0 +1,16 @@
+[package]
+name = "pingator"
+version = "0.1.0"
+authors = ["kedare"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tera = "1"
+serde = { version = "1.0.125", features = ["derive"]}
+structopt = "0.3"
+log = "0.4"
+flexi_logger = "0.17"
+anyhow = "1.0"
+
